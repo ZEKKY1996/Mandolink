@@ -3,10 +3,10 @@
 use Illuminate\Database\Seeder;
 use App\Category;
 
-class DatabaseSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         ];
         
         foreach ($major_category_names as $major_category_name) {
-            if ($major_category_name == 'マンドリンオリジナル曲') {
+            if ($major_category_name == 'マンドリンオリジナル作品') {
                 foreach ($organization_categorys as $organization_category) {
                     Category::create ([
                         'major_category_name' => $major_category_name,
